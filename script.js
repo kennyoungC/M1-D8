@@ -39,9 +39,12 @@ const changeUrls = function () {
      */
 
 const addToTheSecond = function (content) {
-  document.getElementById(`secondList`).classList.add(`li`);
+  let child = document.createElement(`li`);
+  child.textContent = content;
+  list = document.querySelector(`#secondList`);
+  list.append(child);
 };
-addToTheSecond();
+addToTheSecond(`this the newly added list`);
 /* EXERCISE 6
     Write a function for adding a second paragraph to the div.
     */
@@ -55,9 +58,9 @@ const addParagraph = function (content) {
     */
 
 const firstUlDisappear = function () {
-  //
+  document.querySelector(`#firstList`).style.display = `none`;
 };
-
+firstUlDisappear();
 /* EXERCISE 8
     Write a function for making the background of every UL green.
     */
