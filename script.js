@@ -50,9 +50,11 @@ addToTheSecond(`this the newly added list`);
     */
 
 const addParagraph = function (content) {
-  //
+  let paragragh = document.createElement(`p`);
+  paragragh.textContent = content;
+  document.querySelector(`div > p`).append(paragragh);
 };
-
+// addParagraph(`A second paragraph was just added `);
 /* EXERCISE 7
     Write a function for making the first UL disappear.
     */
@@ -60,21 +62,23 @@ const addParagraph = function (content) {
 const firstUlDisappear = function () {
   document.querySelector(`#firstList`).style.display = `none`;
 };
-firstUlDisappear();
+// firstUlDisappear();
 /* EXERCISE 8
     Write a function for making the background of every UL green.
     */
 
 const paintItGreen = function () {
-  //
+  for (lists of document.querySelectorAll(`li`))
+    lists.style.backgroundColor = `green`;
 };
-
+// paintItGreen();
 /* EXERCISE 9
     Make the heading of the page change color every time the user clicks on it.
     */
-
 const makeItClickable = function () {
-  //
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  header = document.querySelector(`header`);
+  header.style.backgroundColor = `#${randomColor}`;
 };
 
 /* EXERCISE 10
@@ -82,7 +86,7 @@ const makeItClickable = function () {
     */
 
 const changeFooterText = function () {
-  //
+  document.querySelector(`footer > p`).textContent = `This is the new footer`;
 };
 
 /* EXERCISE 11
