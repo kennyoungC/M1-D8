@@ -94,14 +94,16 @@ const changeFooterText = function () {
     */
 
 const inputField = document.getElementById("input-field");
-// ...
+inputField.addEventListener(`keydown`, function (e) {
+  console.log(e.key);
+});
 
 /* EXERCISE 12
     Create a new welcome alert message when the page successfully loads.
     */
 
 window.onload = function () {
-  //
+  alert("Hello! I am an alert box!");
 };
 
 /* EXERCISE 13
